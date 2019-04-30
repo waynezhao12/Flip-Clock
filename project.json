@@ -1,0 +1,33 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "一个漂亮的翻页钟（Flip Clock）\n\n壁纸灵感来源于CodePen网站里的一个番茄种项目，地址是：https://codepen.io/putraaryotama/pen/wgwqBB?page=4&q=clock\n由于觉得很好看很适合做壁纸，于是就改成了时钟。\n\n--------------------------------------------\n\nUpdate 1/5/2019:\nNow you can take your own image as background!!!",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"custom_background" : 
+			{
+				"fileType" : "image",
+				"order" : 100,
+				"text" : "Custom Background",
+				"type" : "file",
+				"value" : ""
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"monetization" : false,
+	"preview" : "preview.jpg",
+	"tags" : [ "Technology" ],
+	"title" : "翻页钟 Flip Clock",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : "1324135971"
+}
