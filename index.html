@@ -2,262 +2,57 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Wayne's Flip Clock</title>
+	<meta charset="UTF-8">
+	<title>Wayne's Flip Clock</title>
 
-    <link rel="stylesheet prefetch" href="flipclock.css">
-    <link rel="stylesheet prefetch" href="bootstrap.min.css">
-    <style>
-        body {
-            background: url("desk-white-black-header.jpg") no-repeat center center fixed;
-            background-size: cover;
-        }
+	<link rel="stylesheet prefetch" href="bootstrap.min.css">
+	<link rel="stylesheet prefetch" href="flipclock.css">
+	<link rel="stylesheet prefetch" href="main.css">
 
-        .flip-clock {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            padding-top: 15px;
-            padding-bottom: 25px;
-        }
+	<script>
+		window.console = window.console || function (t) {
+		};
 
-        p {
-            text-align: center;
-        }
-
-        .flip-clock-wrapper {
-            max-width: 460px;
-            margin: 3em auto 2em;
-            display: flex;
-            justify-content: center;
-        }
-
-    </style>
-
-    <script>
-        window.console = window.console || function (t) {
-        };
-    </script>
-
-    <script>
-        if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-        }
-    </script>
-
-    <!-- <script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script> -->
+		if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		}
+	</script>
 </head>
 
 <body translate="no">
 
-    <div class="flip-clock">
-        <h2 id="testmsg"></h2>
-        <div id="clock" class="row">
-            <div class="timer flip-clock-wrapper">
+	<div class="flip-clock">
+		<div id="clock" class="row">
+			<div class="timer flip-clock-wrapper"></div>
+		</div>
+	</div>
 
-                <span class="flip-clock-divider hours">
-                    <span class="flip-clock-label">Hours</span>
-                    <span class="flip-clock-dot top"></span>
-                    <span class="flip-clock-dot bottom"></span>
-                </span>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <span class="flip-clock-divider minutes">
-                    <span class="flip-clock-label">Minutes</span>
-                    <span class="flip-clock-dot top"></span>
-                    <span class="flip-clock-dot bottom"></span>
-                </span>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <span class="flip-clock-divider seconds">
-                    <span class="flip-clock-label">Seconds</span>
-                    <span class="flip-clock-dot top"></span>
-                    <span class="flip-clock-dot bottom"></span>
-                </span>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="flip ">
-                    <li class="flip-clock-before">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">9</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flip-clock-active">
-                        <a href="#">
-                            <div class="up">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                            <div class="down">
-                                <div class="shadow"></div>
-                                <div class="inn">0</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<script src="jquery.min.js"></script>
+	<script src="flipclock.min.js"></script>
 
-    <script src="jquery.min.js"></script>
-    <script src="flipclock.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var clock = $(".timer").FlipClock(0, {
+				clockFace: 'TwentyFourHourClock'
+			})
+		});
+	</script>
 
-    <script>
-        $(document).ready(function () {
-            var clock = $(".timer").FlipClock(0, {
-                clockFace: 'TwentyFourHourClock'
-            })
-        });
-    </script>
-
-    <script>
-        window.wallpaperPropertyListener = {
-            applyUserProperties : function(properties) {
-                if (properties.custom_background) {
-                    var backgroundRoute = properties.custom_background.value;
-                    if (backgroundRoute) {
-                        document.body.style.background = "url('"+'file:///' + backgroundRoute + "') no-repeat center fixed";
-                        document.body.style.backgroundSize="cover";
-                    } else {
-                        document.body.style.background = "url('desk-white-black-header.jpg') no-repeat center fixed";
-                        document.body.style.backgroundSize="cover";
-                    }
-                }
-            }
-        };
-    </script>
+	<script>
+		window.wallpaperPropertyListener = {
+			applyUserProperties: function (properties) {
+				if (properties.custom_background) {
+					var backgroundRoute = properties.custom_background.value;
+					if (backgroundRoute) {
+						document.body.style.background = "url('" + 'file:///' + backgroundRoute + "') no-repeat center fixed";
+						document.body.style.backgroundSize = "cover";
+					} else {
+						document.body.style.background = "url('desk-white-black-header.jpg') no-repeat center fixed";
+						document.body.style.backgroundSize = "cover";
+					}
+				}
+			}
+		};
+	</script>
 
 </body>

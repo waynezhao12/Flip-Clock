@@ -1,0 +1,25 @@
+body {
+  background: url("desk-white-black-header.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.flip-clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+p {
+  text-align: center;
+}
+
+.flip-clock-wrapper {
+  max-width: 460px;
+  margin: 3em auto 2em;
+  display: flex;
+  justify-content: center;
+}
